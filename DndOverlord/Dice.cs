@@ -12,7 +12,7 @@ public class Dice {
     public List<int> RollDie(int numSides, int numRolls)
     {
         var outputList = new List<int>();
-        for (int i = 0; i < numRolls; i ++)
+        for (var i = 0; i < numRolls; i ++)
             outputList.Add(RollDice(numSides));
         return outputList;
     }
