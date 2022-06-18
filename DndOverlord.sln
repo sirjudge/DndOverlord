@@ -1,8 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteDbManager", "SqliteDbManager\SqliteDbManager.csproj", "{2686E0C4-5077-47B7-A9B2-B7503C978D8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndOverlord", "DndOverlord\DndOverlord.csproj", "{3B32D728-3DD6-4071-BCA6-601D59F9BF17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2686E0C4-5077-47B7-A9B2-B7503C978D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2686E0C4-5077-47B7-A9B2-B7503C978D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2686E0C4-5077-47B7-A9B2-B7503C978D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2686E0C4-5077-47B7-A9B2-B7503C978D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B32D728-3DD6-4071-BCA6-601D59F9BF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B32D728-3DD6-4071-BCA6-601D59F9BF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B32D728-3DD6-4071-BCA6-601D59F9BF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B32D728-3DD6-4071-BCA6-601D59F9BF17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
