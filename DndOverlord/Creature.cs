@@ -2,6 +2,8 @@ namespace DndOverlord;
 
 public class Creature
 {
+    public int CR { get; set; }
+    public int Level { get; set; }
     public int Health { get; set; }
     public string Name { get; set; }
     public Wallet Wallet { get; set; }

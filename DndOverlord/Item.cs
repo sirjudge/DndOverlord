@@ -2,6 +2,13 @@ namespace DndOverlord;
 
 public class Item
 {
+    public Item(){}
+    public Item(string name, string description, long value)
+    {
+        Name = name;
+        Description = description;
+        Value = value;
+    }
     public string Name { get; set; }
     public string Description { get; set; }
     public long Value { get; set; }
@@ -9,7 +16,14 @@ public class Item
 
 public class Weapon : Item
 {
+    public Weapon(string name, string description, long value)
+    {
+        Name = name;
+        Description = description;
+        Value = value;
+    }
+
     public int DamageDie { get; set; }
     public int NumDamageDie { get; set; }
-    public long Damgae => Dice.RollDie(DamageDie, NumDamageDie);
+    public long RollDamage() => Dice.RollDie(DamageDie, NumDamageDie);
 }
