@@ -16,13 +16,6 @@ public class Item
 
 public class Weapon : Item
 {
-    public Weapon(string name, string description, long value)
-    {
-        Name = name;
-        Description = description;
-        Value = value;
-    }
-
     public int DamageDie { get; set; }
     public int NumDamageDie { get; set; }
     public long RollDamage() => Dice.RollDie(DamageDie, NumDamageDie);

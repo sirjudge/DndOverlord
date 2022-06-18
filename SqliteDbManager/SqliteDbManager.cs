@@ -1,4 +1,5 @@
 ﻿namespace SqliteDbManager;
+using System.Data.SQLite;
 
 public class SqliteDbManager
 {
@@ -16,6 +17,16 @@ public class SqliteDbManager
     
     public void CreateDatabase(string connectionString)
     {
+        if (string.IsNullOrEmpty(connectionString))
+            throw new Exception("Connection string is not defined.");
         
+        try
+        {
+            using var con = new SQLiteConnection(cs);
+        }
+        catch (Exception e)
+        {
+            throw;
+        }
     }
 }
