@@ -9,11 +9,12 @@ public class Dice {
         return random.Next(1, numSides);
     }
 
-    public List<int> RollDie(int numSides, int numRolls)
+    public static int RollDie(int numSides, int numRolls)
     {
-        var outputList = new List<int>();
-        for (var i = 0; i < numRolls; i ++)
-            outputList.Add(RollDice(numSides));
-        return outputList;
+        var output = 0;
+        for (var i = 0; i < numRolls; i++)
+            output += RollDice(numSides);
+        
+        return output;
     }
 }
