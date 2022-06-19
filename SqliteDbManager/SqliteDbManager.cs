@@ -17,12 +17,10 @@ public class SqliteDbManager
     
     public void CreateDatabase(string connectionString)
     {
-        if (string.IsNullOrEmpty(connectionString))
-            throw new Exception("Connection string is not defined.");
-        
+       
         try
         {
-            using var con = new SQLiteConnection(cs);
+            SQLiteConnection.CreateFile("characterDatabase.sqlite");
         }
         catch (Exception e)
         {
