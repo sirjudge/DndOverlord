@@ -62,7 +62,7 @@ public class Wallet
 
     public long ConvertToCopper(long currencyValue, CurrencyType currencyType)
     {
-        return currencyValue * (1 / ConversionHashMap[currencyType]);
+        return currencyValue *  ConversionHashMap[currencyType];
 
     }
 }

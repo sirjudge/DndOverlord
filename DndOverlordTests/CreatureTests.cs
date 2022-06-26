@@ -46,19 +46,19 @@ public class Tests
 
         
         var copperValue = wallet.ConvertToCopper(1, CurrencyType.Copper);
-        if (copperValue != 10) Assert.Fail($"silver is not converting to copper correctly. Expected 10, instead got {copperValue}"); 
+        if (copperValue != 1) Assert.Fail($"Copper is not converting to copper correctly. Expected 1, instead got {copperValue}"); 
         
         var silverValue = wallet.ConvertToCopper(1, CurrencyType.Silver);
         if (silverValue != 10) Assert.Fail($"silver is not converting to copper correctly. Expected 10, instead got {silverValue}"); 
         
         var electrumValue = wallet.ConvertToCopper(1, CurrencyType.Electrum);
-        if (electrumValue != 10) Assert.Fail($"silver is not converting to copper correctly. Expected 10, instead got {electrumValue}"); 
+        if (electrumValue != 50) Assert.Fail($"Electrum is not converting to copper correctly. Expected 50, instead got {electrumValue}"); 
         
         var goldValue = wallet.ConvertToCopper(1, CurrencyType.Gold);
-        if (goldValue != 10) Assert.Fail($"silver is not converting to copper correctly. Expected 10, instead got {goldValue}"); 
+        if (goldValue != 100) Assert.Fail($"Gold is not converting to copper correctly. Expected 100, instead got {goldValue}"); 
         
         var platinumValue = wallet.ConvertToCopper(1, CurrencyType.Platinum);
-        if (platinumValue != 10) Assert.Fail($"silver is not converting to copper correctly. Expected 10, instead got {platinumValue}"); 
+        if (platinumValue != 1000) Assert.Fail($"platinum is not converting to copper correctly. Expected 1000, instead got {platinumValue}"); 
 
     }
     
