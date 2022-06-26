@@ -3,5 +3,8 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::99E773FD-D6B9-4E1D-9E9E-EF9915C2E126::net6.0::DndOverlordTests.Tests.ValidateTestPlayerNotNull&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::99E773FD-D6B9-4E1D-9E9E-EF9915C2E126::net6.0::DndOverlordTests.Tests.ValidateCurrency&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::99E773FD-D6B9-4E1D-9E9E-EF9915C2E126::net6.0::DndOverlordTests.Tests.TestItemDamage&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::99E773FD-D6B9-4E1D-9E9E-EF9915C2E126::net6.0::DndOverlordTests.Tests.TestDamage&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::99E773FD-D6B9-4E1D-9E9E-EF9915C2E126::net6.0::DndOverlordTests.Tests.TestHealing&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

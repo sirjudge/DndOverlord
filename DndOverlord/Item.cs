@@ -12,6 +12,7 @@ public class Item
     public string Name { get; set; }
     public string Description { get; set; }
     public long Value { get; set; }
+    public CurrencyType ValueCurrency { get; set; }
 }
 
 public class Weapon : Item

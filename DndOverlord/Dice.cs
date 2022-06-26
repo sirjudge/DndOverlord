@@ -1,6 +1,7 @@
 ﻿namespace DndOverlord;
 
 public class Dice {
+
     public int numSides { get; set; }
 
     public static int RollDice(int numSides)
