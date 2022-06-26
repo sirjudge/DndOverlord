@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndOverlord", "DndOverlord\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndOverlordTests", "DndOverlordTests\DndOverlordTests.csproj", "{99E773FD-D6B9-4E1D-9E9E-EF9915C2E126}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roll20Manager", "Roll20Manager\Roll20Manager.csproj", "{1DC4F9CE-C992-474E-BDD1-80002BD8C144}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{99E773FD-D6B9-4E1D-9E9E-EF9915C2E126}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99E773FD-D6B9-4E1D-9E9E-EF9915C2E126}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99E773FD-D6B9-4E1D-9E9E-EF9915C2E126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC4F9CE-C992-474E-BDD1-80002BD8C144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC4F9CE-C992-474E-BDD1-80002BD8C144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC4F9CE-C992-474E-BDD1-80002BD8C144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC4F9CE-C992-474E-BDD1-80002BD8C144}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
