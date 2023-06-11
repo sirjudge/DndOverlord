@@ -13,11 +13,6 @@ public class DiceController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
-
     public IActionResult DiceRoller()
     {
         return View();

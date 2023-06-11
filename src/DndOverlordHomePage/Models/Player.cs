@@ -1,7 +1,7 @@
 namespace DndOverlordHomePage.Models;
 
 
-public class Player : Creature
+public class Character : Creature
 {
 
 }

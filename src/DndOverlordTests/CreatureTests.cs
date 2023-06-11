@@ -1,21 +1,28 @@
-using System.Runtime.InteropServices;
 using DndOverlordHomePage.Models;
-
 namespace DndOverlordTests;
 
 public class Tests
 {
-    private Player TestPlayer { get; set; }
+
+
+    private Character TestPlayer { get; set; }
     private Weapon TestWeapon { get; set; }
-    
+
+    #region set up
     [SetUp]
     public void Setup()
     {
         TestPlayer = GeneratePlayer();
         TestWeapon = GenerateWeapon();
     }
+    
+    public Tests(Character testPlayer, Weapon testWeapon)
+    {
+        TestPlayer = testPlayer;
+        TestWeapon = testWeapon;
+    }
 
-    private Weapon GenerateWeapon()
+    private static Weapon GenerateWeapon()
     {
         return new Weapon()
         {
@@ -27,10 +34,10 @@ public class Tests
             NumDamageDie = 3,
         };
     }
-
-    private Player GeneratePlayer()
+    
+    private static Character GeneratePlayer()
     {
-        return new Player()
+        return new Character()
         {
             Name = "Ol Swampy",
             ItemList = new List<Item>()
@@ -49,6 +56,7 @@ public class Tests
             TotalHealth = 20,
         };
     }
+    #endregion
 
     [Test]
     public void ValidateTestPlayerNotNull()
@@ -94,8 +102,9 @@ public class Tests
     public void TestDamage()
     {
         TestPlayer.DamageCreature(5);
-        Assert.That(TestPlayer.CurrentHealth is 5, 
-            $"TestPlayer.CurrentHealth expected 5, instead is {TestPlayer.CurrentHealth}");
+        if (TestPlayer != null)
+            Assert.That(TestPlayer.CurrentHealth is 5,
+                $"TestPlayer.CurrentHealth expected 5, instead is {TestPlayer.CurrentHealth}");
     }
 
     [Test]
