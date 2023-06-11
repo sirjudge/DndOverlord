@@ -1,17 +1,25 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    Layout = "_Layout";
 }
 
 <!DOCTYPE html>
 
 <html>
+<script src="~/js/DiceRoller.js" asp-append-version="true"></script>
 <head>
     <title>Dice Roller Page</title>
 </head>
 <body>
-<div>
-      DiceController
+<div id="RollingInputs">
+    <p>
+        Number of dice to roll<br/>
+        <input type="text" id="numberOfDiceToRoll"/><br/>
+        Number of sides per dice<br/>
+        <input type="text" id="diceSides"/><br/>
+        <button id="RollDice" onclick="Roll()" type="button">Roll Dice</button>
+        <br/>
+        Roll: <input type="text" disabled="disabled" id="rollOutputBox"/>
+    </p>
 </div>
 </body>
 </html>
