@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
+using DndOverlordHomePage.Models;
 
 namespace DndOverlordTests;
-using DndOverlord;
 
 public class Tests
 {
