@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndOverlordTests", "DndOverlordTests\DndOverlordTests.csproj", "{99E773FD-D6B9-4E1D-9E9E-EF9915C2E126}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DndOverlordHomePage", "DndOverlordHomePage\DndOverlordHomePage.csproj", "{7EDBA303-BD4A-4D3D-BE57-3251B808A913}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99E773FD-D6B9-4E1D-9E9E-EF9915C2E126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E773FD-D6B9-4E1D-9E9E-EF9915C2E126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E773FD-D6B9-4E1D-9E9E-EF9915C2E126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E773FD-D6B9-4E1D-9E9E-EF9915C2E126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDBA303-BD4A-4D3D-BE57-3251B808A913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDBA303-BD4A-4D3D-BE57-3251B808A913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDBA303-BD4A-4D3D-BE57-3251B808A913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDBA303-BD4A-4D3D-BE57-3251B808A913}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
