@@ -1,9 +1,10 @@
-namespace DndOverlord;
+namespace DndOverlordHomePage.Models;
+
 
 public class Feat
 {
     public string Name { get; set; }
-    public string descrtiption { get; set; }
+    public string Description { get; set; }
     public int Uses { get; set; }
     
 }

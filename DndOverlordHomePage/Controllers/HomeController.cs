@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using DndOverlordHomePage.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DndOverlordHomePage.Controllers;
 

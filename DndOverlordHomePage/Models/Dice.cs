@@ -1,4 +1,5 @@
-﻿namespace DndOverlord;
+﻿namespace DndOverlordHomePage.Models;
+
 
 public class Dice {
 

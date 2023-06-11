@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using DndOverlordHomePage.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DndOverlordHomePage.Controllers;
 
@@ -18,11 +18,11 @@ public class DiceController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult DiceRoller()
     {
         return View();
     }
-
+    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
