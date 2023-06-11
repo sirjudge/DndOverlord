@@ -3,22 +3,20 @@ namespace DndOverlordTests;
 
 public class Tests
 {
-
-
-    private Character TestPlayer { get; set; }
+    private Creature TestCreature { get; set; }
     private Weapon TestWeapon { get; set; }
 
     #region set up
     [SetUp]
     public void Setup()
     {
-        TestPlayer = GeneratePlayer();
+        TestCreature = GeneratePlayer();
         TestWeapon = GenerateWeapon();
     }
     
-    public Tests(Character testPlayer, Weapon testWeapon)
+    public Tests(Character testCreature, Weapon testWeapon)
     {
-        TestPlayer = testPlayer;
+        TestCreature = testCreature;
         TestWeapon = testWeapon;
     }
 
@@ -61,16 +59,15 @@ public class Tests
     [Test]
     public void ValidateTestPlayerNotNull()
     {
-        Assert.That(TestPlayer, Is.Not.Null);
+        Assert.That(TestCreature, Is.Not.Null);
     }
 
     [Test]
     public void ValidateCurrency()
     {
-        var wallet = TestPlayer.Wallet;
+        var wallet = TestCreature.Wallet;
         if (wallet.ConversionHashMap == null) Assert.Fail("wallet conversion hashmap is wrong");
 
-        
         var copperValue = wallet.ConvertToCopper(1, CurrencyType.Copper);
         if (copperValue != 1) Assert.Fail($"Copper is not converting to copper correctly. Expected 1, instead got {copperValue}"); 
         
@@ -90,7 +87,7 @@ public class Tests
     [Test]
     public void TestItemDamage()
     {
-        for (var i = 0; i < 5; i++)
+        for (var i = 0; i < 30; i++)
         {
             var damageRoll = TestWeapon.RollDamage();
             if (damageRoll is < 3 or > 24)
@@ -101,17 +98,17 @@ public class Tests
     [Test]
     public void TestDamage()
     {
-        TestPlayer.DamageCreature(5);
-        if (TestPlayer != null)
-            Assert.That(TestPlayer.CurrentHealth is 5,
-                $"TestPlayer.CurrentHealth expected 5, instead is {TestPlayer.CurrentHealth}");
+        TestCreature.DamageCreature(5);
+        if (TestCreature != null)
+            Assert.That(TestCreature.CurrentHealth is 5,
+                $"TestPlayer.CurrentHealth expected 5, instead is {TestCreature.CurrentHealth}");
     }
 
     [Test]
     public void TestHealing()
     {
-        TestPlayer.HealCreature(5);
-        Assert.That(TestPlayer.CurrentHealth is 15,
-            $"TestPlayer.CurrentHealth expected is 15, instead it {TestPlayer.CurrentHealth}");
+        TestCreature.HealCreature(5);
+        Assert.That(TestCreature.CurrentHealth is 15,
+            $"TestPlayer.CurrentHealth expected is 15, instead it {TestCreature.CurrentHealth}");
     }
 }
