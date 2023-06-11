@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<script src="~/js/Character.js" asp-append-version="true"></script>
+<head>
+    <title id="CharacterEditor">View Characters</title>
+</head>
+<body>
+<div id="CharacterInfo">
+    Character Name:<br/>
+    <input type="text" id="characterName" disabled="disabled" value="test Name"/><br/>
+    Character Bio:<br/>
+    <input type="text" name="characterBio" id="characterBio"  disabled="disabled" value="test bio"/><br/>
+    <br/>
+    Race<br/>
+    <select name="race" disabled="disabled">
+        <option value="Dwarf" selected="selected">Elf</option>
+        <option value="Elf">Elf</option>
+        <option value="Eladrin">Eladrin</option>
+    </select>
+</div>
+</body>
+</html>
