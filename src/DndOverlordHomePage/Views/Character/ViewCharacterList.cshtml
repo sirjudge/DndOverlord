@@ -10,12 +10,26 @@
     <title id="CharacterEditor">View Characters</title>
 </head>
 <body>
+
+<input type="button" value="New" onclick="location.href='@Url.Action("New", "Character")'" />
+
 <div id="CharacterInfo">
     <table>
         <thead>CharacterName</thead>
         <thead>Class</thead>
         <thead>Level</thead>
-        
+        <thead>Action</thead>
+        <tbody>
+        <tr>
+            <td>Swampy</td>
+            <td>Druid</td>
+            <td>20</td>
+            <td>
+                <input type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Character")'" />
+                <input type="button" value="View" onclick="location.href='@Url.Action("View", "Character")'" />
+            </td>
+        </tr>
+        </tbody>
     </table>
 </div>
 </body>

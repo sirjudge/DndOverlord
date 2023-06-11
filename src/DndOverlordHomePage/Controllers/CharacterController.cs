@@ -22,11 +22,13 @@ public class CharacterController : Controller
         return View("ViewCharacter");
     }
     
-        public IActionResult Edit(){
-            return View("ViewCharacter");
-        }
+    public IActionResult Edit(){
+        return View("NewUpdateCharacter");
+    }
     
-    
+    public IActionResult New(){
+        return View("NewUpdateCharacter");
+    }
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
