@@ -1,4 +1,7 @@
-﻿namespace DndOverlordHomePage.Repositories;
+﻿using System.Data;
+using System.Data.SqlClient;
+
+namespace DndOverlordHomePage.Repositories;
 using DndOverlordHomePage.Models;
 
 public class CharacterRepository
@@ -21,9 +24,21 @@ public class CharacterRepository
         
     }
 
-    public void Get()
+    public Character Get(long characterId)
     {
-        
+        using (var sqlConnection = new SqlConnection(GetConnectionString()))
+        {
+            sqlConnection.Open();
+            var storedProcedureName = "GetCharacter_01";
+            using (var sqlCommand = new SqlCommand(storedProcedureName, sqlConnection))
+            {
+                sqlCommand.CommandTimeout = 30;
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@CharacterID",characterId);
+                return new Character(sqlCommand.ExecuteReader());
+            }
+        }
     }
-    
+
+    private string GetConnectionString() => "";
 }

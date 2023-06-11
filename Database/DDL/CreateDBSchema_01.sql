@@ -1,3 +1,10 @@
+use [master]
+go
+
+alter database [DndOverlord] set single_user with rollback immediate
+go
+
+
 drop database if exists DndOverlord
 go
 
