@@ -1,7 +1,4 @@
-using System.Linq.Expressions;
-
 namespace DndOverlordHomePage.Models;
-
 
 public class StatBlock
 {
@@ -16,6 +13,7 @@ public class StatBlock
 
 public class Experience
 {
+    public int Level { get; private set; }
     private long ExperiencePoints { get; set; }
     public void AddExperience(long experiencePointsToAdd) => ExperiencePoints += experiencePointsToAdd;
     public void SubtractExperience(long experiencePointsToRemove) => ExperiencePoints -= experiencePointsToRemove;
@@ -25,7 +23,6 @@ public class Creature
 {
     public int CR { get; set; }
     public Experience Experience { get; set; }
-    public int Level { get; set; }
     public int TotalHealth { get; set; }
     public int CurrentHealth { get; set; }
     public int TemporaryHealth { get; set; }
