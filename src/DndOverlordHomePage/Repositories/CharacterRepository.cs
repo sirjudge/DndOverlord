@@ -26,39 +26,27 @@ public class CharacterRepository : IRepository
 
     public List<Character> GetCharacterList()
     {
-        using (var sqlConnection = new SqlConnection(GetConnectionString()))
-        {
-            sqlConnection.Open();
-            var storedProcedureName = "GetCharacterList_01";
-            using (var sqlCommand = new SqlCommand(storedProcedureName, sqlConnection))
-            {
-                sqlCommand.CommandTimeout = 30;
-                sqlCommand.CommandType = CommandType.StoredProcedure;
-                using (var reader = sqlCommand.ExecuteReader())
-                {
-                    var characterList = new List<Character>();
-                    while (reader.Read())
-                        characterList.Add(new Character(sqlCommand.ExecuteReader()));
-                    return characterList;
-                }
-            }
-        }
+        using var sqlConnection = new SqlConnection(GetConnectionString());
+        sqlConnection.Open();
+        using var sqlCommand = new SqlCommand("GetCharacterList_01", sqlConnection);
+        sqlCommand.CommandTimeout = 30;
+        sqlCommand.CommandType = CommandType.StoredProcedure;
+        using var reader = sqlCommand.ExecuteReader();
+        var characterList = new List<Character>();
+        while (reader.Read())
+            characterList.Add(new Character(sqlCommand.ExecuteReader()));
+        return characterList;
     }
     
     public Character Get(long characterId)
     {
-        using (var sqlConnection = new SqlConnection(GetConnectionString()))
-        {
-            sqlConnection.Open();
-            var storedProcedureName = "GetCharacter_01";
-            using (var sqlCommand = new SqlCommand(storedProcedureName, sqlConnection))
-            {
-                sqlCommand.CommandTimeout = 30;
-                sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CharacterID",characterId);
-                return new Character(sqlCommand.ExecuteReader());
-            }
-        }
+        using var sqlConnection = new SqlConnection(GetConnectionString());
+        sqlConnection.Open();
+        using var sqlCommand = new SqlCommand("GetCharacter_01", sqlConnection);
+        sqlCommand.CommandTimeout = 30;
+        sqlCommand.CommandType = CommandType.StoredProcedure;
+        sqlCommand.Parameters.AddWithValue("@CharacterID",characterId);
+        return new Character(sqlCommand.ExecuteReader());
     }
 
     private string GetConnectionString() => "";
