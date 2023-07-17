@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using DndOverlordHomePage.Models;
+using DndOverlordHomePage.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DndOverlordHomePage.Controllers;
@@ -15,10 +16,17 @@ public class CharacterController : Controller
 
     public IActionResult Index()
     {
+        var characterRepository = new CharacterRepository();
+        var characterList = characterRepository.GetCharacterList();
         return View("ViewCharacterList");
     }
     
     public IActionResult View(){
+        var characterRepository = new CharacterRepository();
+
+        //TODO: take in character ID
+        var characterID = 1;
+        var characterList = characterRepository.Get(characterID);
         return View("ViewCharacter");
     }
     
